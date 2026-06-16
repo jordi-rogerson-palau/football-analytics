@@ -3,6 +3,8 @@ import importlib.util
 import sys
 from pathlib import Path
 
+APP_DIR = Path(__file__).resolve().parent
+
 st.set_page_config(
     page_title="Football Analytics Dashboard",
     layout="wide",
@@ -234,7 +236,7 @@ for i, label in enumerate(cat_pages):
 
 # ── Page runner ────────────────────────────────────────
 def run_page(script_path: str):
-    path = Path(script_path)
+    path = APP_DIR / script_path
     if not path.exists():
         st.error(f"Script not found: `{script_path}`")
         return
