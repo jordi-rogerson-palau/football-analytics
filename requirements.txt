@@ -1,0 +1,9 @@
+streamlit
+duckdb
+pandas
+numpy
+altair
+matplotlib
+scipy
+shapely
+pillow
